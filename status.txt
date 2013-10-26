@@ -1,0 +1,13 @@
+Lenovo          100     attgcatgc
+
+women           12      train
+ar              11      sig entertainment
+
+ab              20      ibm ponder
+aq              10      ibm - alice + bob qbit
+at              11      assembly
+
+
+NO
+aa              3/450   python
+IEEE Comp       0       graphs          
