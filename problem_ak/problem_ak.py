@@ -1,29 +1,29 @@
 import sys
 
 roads = {}
-def findPath(start, end):
-	#dfs on roads from star to end
-
-	def bfs(G, s):
-	    P, Q = {s: None}, deque([s]) 
-	    while Q:
-		u = Q.popleft() 
-		for v in G[u]:
-		    if v in P: continue 
-		    P[v] = u 
-		    Q.append(v)
-	    return P
+def findPath(start,end): 
+	'''iterative depth first search from start'''
+	path = []
+	q=[start]
+	while q:
+		v=q.pop(0)
+		if v == end:
+			break	 
+		if v not in path:
+			path=path+[v]
+			q=roads[v]+q
+	return path
 
 def findBottleneck(startNode, endNode, potentials):
 	li = findPath(startNode, endNode)
 	if len(potentials) == 0:
 		potentials = li[:]
-		print "adding to potentials"
-		print str(potentials)
+		#print "adding to potentials"
+		#print str(potentials)
 	else:
 		potentials = list(set(potentials).intersection(set(li)))
-		print "sub from potentials"
-		print str(potentials)
+		#print "sub from potentials"
+		#print str(potentials)
 	return potentials
 	
 
@@ -65,17 +65,17 @@ for startNode in start:
 	for endNode in end:
 		potentials = findBottleneck(startNode, endNode, potentials)
 
-print "answer is "
+potentials.sort()
 for i in potentials:
 	print i
 
-print "Roads: map: " 
-print str(roads)
+#print "Roads: map: " 
+#print str(roads)
 
-print "Starts node"
-for i in start:
-	print i
+#print "Starts node"
+#for i in start:
+	#print i
 
-print "End nodes"
-for i in end:
-	print i
+#print "End nodes"
+#for i in end:
+	#print i
