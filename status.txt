@@ -7,6 +7,9 @@ ab              20      ibm ponder
 aq              10      ibm - alice + bob qbit
 at              11      assembly
 
+ak              54/222                bottleneck
+ieee uni        4/68    palindrome cars
+aj                      bear skiing on hills
 
 NO
 aa              3/450   python
