@@ -3,14 +3,26 @@ Lenovo          100     attgcatgc
 women           12      train
 ar              11      sig entertainment
 
-ab              20      ibm ponder
+
 aq              10      ibm - alice + bob qbit
-at              11      assembly
+
+
 
 ak              54/222                bottleneck
 ieee uni        4/68    palindrome cars
-aj                      bear skiing on hills
+
+ad                      secret messages
+ieee.tv                 tiles xxxxxoxoxoxoxoxox print out
+an              17/98   modified cesar cipher
+ag              65/135  nice robot - right down path traversal thing
+av              ?       oasis desert thing
+aw              5        cipher thing again
+
+
+
 
 NO
 aa              3/450   python
 IEEE Comp       0       graphs          
+at              11      assembly
+ab              20      ibm ponder
