@@ -27,22 +27,22 @@ while True:
 		current = stack.pop()
 		ans = 0
 		if str(current) in "+-&|~X":
-			op1 = int(stack.pop(), base=16)
+			op1 = hex(stack.pop())
+			#op1 = int(stack.pop(), base=16)
 			#print "op1 " + str(op1)
 			if current == '~':
 				#print "not"
 				ans = not op1
 			else:
 
-				op2 = stack.pop()
+				op2 = hex(stack.pop())
 				#print op2;
-				op2 = int(op2, base=16)
+				#op2 = int(op2, base=16)
 				#print "op2 " + str(op2)
 				if current == '+':
-					ans = op1 + op2	
-
+					ans = op1 + op2
 				if current == '-':
-					ans = op2 - op1	
+					ans = op2 - op1
 				if current == '&':
 					ans = op1 & op2
 				if current == '|':
@@ -50,6 +50,7 @@ while True:
 				if current == 'X':
 					ans = op1 ^ op2
 			#print ans
+			ans = ans[:2]
 			stack.append(ans)
 
 
