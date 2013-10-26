@@ -1,6 +1,7 @@
 import sys
 import itertools
-
+import collections
+import math
 # http://docs.python.org/2/library/itertools.html#itertools.combinations
 def combinations(iterable, r):
     # combinations('ABCD', 2) --> AB AC AD BC BD CD
@@ -33,7 +34,23 @@ meat = sys.stdin.readline().strip('\n')
 
 combo = []
 summ=0
-for i in range(int(num)):
+#calulate firsts and seconds
+summ += len(meat)
+
+#first find how many groups of chars there is
+counts  = dict(collections.Counter(meat))
+print "counts" 
+print counts
+for key,value in counts.items():
+	if value > 1:
+		n_fact = (math.factorial(value))
+		n_r_fact = math.factorial(value - 2)
+		combos = float(n_fact)/((n_r_fact)*2)
+		print "for value " + str(value)
+		print "combo " + str(combos)
+		summ += combos
+
+for i in range(2,int(num)):
 	thingy = list(combinations(meat,i+1))
 	for i in thingy:
 		thing = "".join(i)
@@ -41,4 +58,4 @@ for i in range(int(num)):
 			summ+=1
 
 #summ=0
-print summ
+print int(summ)
