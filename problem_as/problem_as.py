@@ -24,7 +24,7 @@ def move(currentPath, dest, roads):
 
 dest = sys.stdin.readline()
 
-
+meat = []  #please work
 roads = {}
 
 while True:
