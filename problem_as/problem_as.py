@@ -69,13 +69,13 @@ if len(allPossiblePaths) != 0:
 
 
 	#print roads
-	print "Total Routes: " + str(len(allPossiblePaths))
-	print  "Shortest Route Length: " + str(len(minList))
+	print( "Total Routes: " + str(len(allPossiblePaths)))
+	print(  "Shortest Route Length: " + str(len(minList)))
 	last= "Shortest Route after Sorting of Routes of length " + str(len(minList)) + ":"
 	for it in minList:
 		last = last + " " + it
-	print last
+	print(last)
 else:
 	thing  = "No Route Available from F to " + dest.strip('\n') 
-	print thing
+	print(thing)
 
